@@ -2,10 +2,11 @@
   "name": "webgl-heatmap",
   "version": "0.2.3",
   "description": "A commonJS compatible version of pyalot's webgl-heatmap",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "budo ./example/main.js --live | bistre"
+    "start": "budo ./example/main.js --live | bistre",
+    "prepare": "mkdir -p dist && npx browserify -d -s WebGLHeatmap index.js -o dist/index.js"
   },
   "repository": {
     "type": "git",
